@@ -24,7 +24,6 @@ const testValidation = (input) => {
         // console.log(inputsData[input.name])
         // console.log(input.value)
         // console.log(inputsData[rootInputName].value)
-        console.log(inputsData)
         return regExps[rootInputName].test(input.value) && input.value === inputsData[rootInputName].value;
     }
     return regExps[input.name].test(input.value)
