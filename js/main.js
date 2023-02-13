@@ -19,11 +19,6 @@ inputs.forEach( (input) => {
 const testValidation = (input) => {
     if (input.name.includes('confirm')) {
         const rootInputName = input.name.replace('_confirm', '');
-        // console.log(regExps[rootInputName].test(input.value));
-        // console.log(inputsData[input.name].value === inputsData[rootInputName].value);
-        // console.log(inputsData[input.name])
-        // console.log(input.value)
-        // console.log(inputsData[rootInputName].value)
         return regExps[rootInputName].test(input.value) && input.value === inputsData[rootInputName].value;
     }
     return regExps[input.name].test(input.value)
